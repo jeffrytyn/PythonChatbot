@@ -15,10 +15,6 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 nltk.download('popular', quiet=True) # for downloading packages
 
-# uncomment the following only the first time
-#nltk.download('punkt') # first-time use only
-#nltk.download('wordnet') # first-time use only
-
 
 #Reading in the corpus
 with open('c:/Users/jeffr/Documents/Python Scripts/chatb.txt','r', encoding='utf8', errors ='ignore') as fin:
@@ -40,7 +36,6 @@ for word in raw.split():
         newraw.append(word)
 raw = " ".join(newraw)
 
-#TOkenisation
 sent_tokens = nltk.sent_tokenize(raw)# converts to list of sentences 
 word_tokens = nltk.word_tokenize(raw)# converts to list of words
 
